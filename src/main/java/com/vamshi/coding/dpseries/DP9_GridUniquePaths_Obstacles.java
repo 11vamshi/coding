@@ -24,16 +24,16 @@ public class DP9_GridUniquePaths_Obstacles {
         maze.add(List.of(-1, 0, -1, 0, 0, 0, 0, 0, -1 ));
         maze.add(List.of(-1, 0, 0, 0, 0, 0, -1, -1, 0 ));
 
-        int m = maze.size();
-        int n = maze.get(0).size();
+        int n = maze.size();
+        int m = maze.get(0).size();
 
-        int[][] dp = new int[m][n];
+        int[][] dp = new int[n][m];
 
         for(int[] row: dp){
             Arrays.fill(row, -1);
         }
 
-        System.out.println(countWays(m-1, n-1, maze, dp));
+        System.out.println(countWays(n-1, m-1, maze, dp));
     }
 
     public static int countWays(int i, int j, ArrayList<List<Integer>> maze, int[][] dp){
