@@ -14,15 +14,15 @@ public class DP9_GridUniquePaths_Obstacles {
     public static void main(String[] args) {
         ArrayList<List<Integer>> maze = new ArrayList<>();
 
-        maze.add(List.of(0,0,0));
-        maze.add(List.of(0,-1,0));
-        maze.add(List.of(0,0,0));
+//        maze.add(List.of(0,0,0));
+//        maze.add(List.of(0,-1,0));
+//        maze.add(List.of(0,0,0));
 
-//        maze.add(List.of(0, -1, 0, 0, -1, 0, 0, 0, 0 ));
-//        maze.add(List.of(-1, 0, 0, 0, 0, -1, -1, 0, 0 ));
-//        maze.add(List.of(0, 0, 0, -1, -1, 0, 0, 0, 0 ));
-//        maze.add(List.of(-1, 0, -1, 0, 0, 0, 0, 0, -1 ));
-//        maze.add(List.of(-1, 0, 0, 0, 0, 0, -1, -1, 0 ));
+        maze.add(List.of(0, -1, 0, 0, -1, 0, 0, 0, 0 ));
+        maze.add(List.of(-1, 0, 0, 0, 0, -1, -1, 0, 0 ));
+        maze.add(List.of(0, 0, 0, -1, -1, 0, 0, 0, 0 ));
+        maze.add(List.of(-1, 0, -1, 0, 0, 0, 0, 0, -1 ));
+        maze.add(List.of(-1, 0, 0, 0, 0, 0, -1, -1, 0 ));
 
         int m = maze.size();
         int n = maze.get(0).size();
@@ -36,7 +36,7 @@ public class DP9_GridUniquePaths_Obstacles {
         System.out.println(countWays(m-1, n-1, maze, dp));
     }
 
-    static int countWays(int i, int j, ArrayList<List<Integer>> maze, int[][] dp){
+    public static int countWays(int i, int j, ArrayList<List<Integer>> maze, int[][] dp){
 
         if( i == 0 && j == 0){
             return 1;
@@ -54,6 +54,8 @@ public class DP9_GridUniquePaths_Obstacles {
         int up = countWays(i-1, j,maze, dp);
         int left = countWays(i, j-1, maze, dp);
 
-    return dp[i][j] = up+left;
+        int mod = 1000000007;
+
+    return dp[i][j] = (up+left) % mod;
     }
 }
