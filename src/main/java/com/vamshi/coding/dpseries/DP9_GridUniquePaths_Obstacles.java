@@ -14,15 +14,10 @@ public class DP9_GridUniquePaths_Obstacles {
     public static void main(String[] args) {
         ArrayList<List<Integer>> maze = new ArrayList<>();
 
-//        maze.add(List.of(0,0,0));
-//        maze.add(List.of(0,-1,0));
-//        maze.add(List.of(0,0,0));
+        maze.add(List.of(0,0,0));
+        maze.add(List.of(0,-1,0));
+        maze.add(List.of(0,0,0));
 
-        maze.add(List.of(0, -1, 0, 0, -1, 0, 0, 0, 0 ));
-        maze.add(List.of(-1, 0, 0, 0, 0, -1, -1, 0, 0 ));
-        maze.add(List.of(0, 0, 0, -1, -1, 0, 0, 0, 0 ));
-        maze.add(List.of(-1, 0, -1, 0, 0, 0, 0, 0, -1 ));
-        maze.add(List.of(-1, 0, 0, 0, 0, 0, -1, -1, 0 ));
 
         int n = maze.size();
         int m = maze.get(0).size();
