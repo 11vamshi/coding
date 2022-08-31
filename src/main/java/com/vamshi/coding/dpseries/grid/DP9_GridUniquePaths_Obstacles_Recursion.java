@@ -1,4 +1,4 @@
-package com.vamshi.coding.dpseries;
+package com.vamshi.coding.dpseries.grid;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,9 +7,14 @@ import java.util.List;
 // recursion starts from the bottom right, opposite to tabulation solution, we cross boundaries
 // when going up j < 0 or going left i < 0, so we have 2 boundary conditions
 // we need dp array in recursion as usual
-// TC exponential, since each place has 2 calculations to make pow(2, m*n)
-// SC stack(n) + m*n for dp..........stack(n) => at max stack will have n method calls
-public class DP9_GridUniquePaths_Obstacles {
+//
+// TC exponential without dp
+// TC with dp Reason: At max, there will be N*M calls of recursion. because might be stored in dp
+// SC stack(m+n) + m*n for dp..........stack(n) => at max stack will have n method calls
+// Reason: We are using a recursion stack space:O((M-1)+(N-1)),
+// here (M-1)+(N-1) is the path length and an external DP Array of size ‘N*M’.
+
+public class DP9_GridUniquePaths_Obstacles_Recursion {
 
     public static void main(String[] args) {
         ArrayList<List<Integer>> maze = new ArrayList<>();

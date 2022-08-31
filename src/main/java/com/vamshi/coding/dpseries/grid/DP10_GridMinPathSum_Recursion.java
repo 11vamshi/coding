@@ -1,4 +1,4 @@
-package com.vamshi.coding.dpseries;
+package com.vamshi.coding.dpseries.grid;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,9 +9,10 @@ import static java.lang.Integer.MAX_VALUE;
 // recursion starts from the bottom right, opposite to tabulation solution, we cross boundaries
 // when going up j < 0 or going left i < 0, so we have 2 boundary conditions
 // we need dp array in recursion as usual
-// TC exponential, since each place has 2 calculations to make pow(2, m*n)
-// SC stack(n) + m*n for dp..........stack(n) => at max stack will have n method calls
-public class DP10_GridMinPathSum {
+// TC exponential without dp
+// TC with dp Reason: At max, there will be N*M calls of recursion. because might be stored in dp
+// SC stack(n)
+public class DP10_GridMinPathSum_Recursion {
 
     public static void main(String[] args) {
         int[][] grid = new int[][]{{5, 9, 6},{11, 5, 2}};

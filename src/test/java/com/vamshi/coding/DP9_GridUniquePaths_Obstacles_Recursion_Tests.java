@@ -1,6 +1,6 @@
 package com.vamshi.coding;
 
-import com.vamshi.coding.dpseries.DP9_GridUniquePaths_Obstacles;
+import com.vamshi.coding.dpseries.grid.DP9_GridUniquePaths_Obstacles_Recursion;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -69,7 +69,7 @@ import java.util.List;
 
 
 @SpringBootTest
-class DP9_GridUniquePaths_Obstacles_Tests {
+class DP9_GridUniquePaths_Obstacles_Recursion_Tests {
 
 	@Test
 	void contextLoads() {
@@ -91,7 +91,7 @@ class DP9_GridUniquePaths_Obstacles_Tests {
 			Arrays.fill(row, -1);
 		}
 
-		System.out.println("result is " + com.vamshi.coding.dpseries.DP9_GridUniquePaths_Obstacles.countWays(m-1, n-1, maze, dp));
+		System.out.println("result is " + DP9_GridUniquePaths_Obstacles_Recursion.countWays(m-1, n-1, maze, dp));
 
 
 	}
@@ -119,7 +119,7 @@ class DP9_GridUniquePaths_Obstacles_Tests {
 			Arrays.fill(row, -1);
 		}
 
-		System.out.println("result is " + com.vamshi.coding.dpseries.DP9_GridUniquePaths_Obstacles.countWays(m-1, n-1, maze, dp));
+		System.out.println("result is " + DP9_GridUniquePaths_Obstacles_Recursion.countWays(m-1, n-1, maze, dp));
 
 
 	}
@@ -153,7 +153,7 @@ class DP9_GridUniquePaths_Obstacles_Tests {
 			Arrays.fill(row, -1);
 		}
 
-		System.out.println("result is " + com.vamshi.coding.dpseries.DP9_GridUniquePaths_Obstacles.countWays(m-1, n-1, maze, dp));
+		System.out.println("result is " + DP9_GridUniquePaths_Obstacles_Recursion.countWays(m-1, n-1, maze, dp));
 
 
 
@@ -191,7 +191,7 @@ class DP9_GridUniquePaths_Obstacles_Tests {
 			Arrays.fill(row, -1);
 		}
 
-		System.out.println("result is " + com.vamshi.coding.dpseries.DP9_GridUniquePaths_Obstacles.countWays(m-1, n-1, maze, dp));
+		System.out.println("result is " + DP9_GridUniquePaths_Obstacles_Recursion.countWays(m-1, n-1, maze, dp));
 
 	}
 
@@ -214,7 +214,7 @@ class DP9_GridUniquePaths_Obstacles_Tests {
 			Arrays.fill(row, -1);
 		}
 
-		System.out.println("result is " + com.vamshi.coding.dpseries.DP9_GridUniquePaths_Obstacles.countWays(m-1, n-1, maze, dp));
+		System.out.println("result is " + DP9_GridUniquePaths_Obstacles_Recursion.countWays(m-1, n-1, maze, dp));
 
 	}
 

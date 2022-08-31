@@ -1,4 +1,4 @@
-package com.vamshi.coding.dpseries;
+package com.vamshi.coding.dpseries.grid;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,11 +6,15 @@ import java.util.List;
 
 // tabulation starts from the top right, with base case and fill up the table,
 // we are not crossing boundaries anywhere
-// TC m*n, since we are pre-calculating and storing for future use
-// SC m*n for dp, which can be further optimised
+// TC m*n, since we are pre-calculating and storing for future use; Reason: There are two nested loops
+// TC : At max, there will be N*M calls and result stored in dp
+
+// SC m*n for dp, which can be further optimised - Reason: We are using an external array of size ‘N*M’’.
 
 // this solution although passing all tests, failing on submission, solution at the bottom is
 // success on submission
+
+
 public class DP9_GridUniquePaths_Obstacles_Tabulation {
 
     public static void main(String[] args) {
