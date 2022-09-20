@@ -2,6 +2,7 @@ package com.vamshi.coding.leetcode;
 
 import java.util.Stack;
 
+// stack might not be empty at the end of the function
 public class L503_nextGreaterElement {
 
     public static void main(String[] args) {

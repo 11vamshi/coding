@@ -25,10 +25,10 @@ public class L15_ThreeSum {
                     if(-constant == nums[left] + nums[right]){
                         result.add(Arrays.asList(constant, nums[left], nums[right]));
 
-                        while(nums[left+1] == nums[left]){
+                        while(left < right && nums[left+1] == nums[left]){
                             left++;
                         }
-                        while(nums[right-1] == nums[right]){
+                        while(left < right && nums[right-1] == nums[right]){
                             right--;
                         }
                         left++;

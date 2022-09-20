@@ -3,7 +3,9 @@ package com.vamshi.coding.dpseries.grid;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+//1
+//2 3
+//3 6 7
 // base case is (0,0)
 // recursion starts from each cell of bottom row
 // TC exponential without dp
