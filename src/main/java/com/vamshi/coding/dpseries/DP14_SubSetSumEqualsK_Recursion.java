@@ -20,7 +20,6 @@ public class DP14_SubSetSumEqualsK_Recursion {
         int n = arr.length;
         int k = 5;
 
-
         int dp[][] = new int[n][k+1];
         for(int[] row:dp){
             Arrays.fill(row, -1);
@@ -31,7 +30,6 @@ public class DP14_SubSetSumEqualsK_Recursion {
     }
 
     public static boolean recursion(int[] arr, int n, int k, int[][] dp){
-
         if(n == 0){
             if(k==0 || k == arr[0])
                 return true;

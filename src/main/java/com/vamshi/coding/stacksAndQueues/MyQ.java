@@ -2,7 +2,6 @@ package com.vamshi.coding.stacksAndQueues;
 
 public class MyQ {
 
-
     int[] arr;
 
     int size;

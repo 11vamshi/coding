@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class StackUsingQueue {
 
-
+    int top = -1;
     Queue<Integer> q1 = new LinkedList<>();
 
     void push(int x){

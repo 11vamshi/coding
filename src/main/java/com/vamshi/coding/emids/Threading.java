@@ -4,7 +4,8 @@ public class Threading {
 
     public static void main(String[] args) {
 
-    Thread h = new Thread(() -> {System.out.println("hi");});
+//    Thread h = new Thread(() -> {System.out.println("hi");});
+        Hack_thread h = new Hack_thread();
 
     h.start();
 
@@ -12,7 +13,7 @@ public class Threading {
 
         try{
 
-//            h.sleep(10);
+            h.sleep(10);
 
         }
         catch (Exception e ){
@@ -24,4 +25,14 @@ public class Threading {
     }
 
 
+
+
+}
+
+class Hack_thread extends Thread
+{
+    public void run(){
+        System.out.println("hi");
+
+    }
 }
