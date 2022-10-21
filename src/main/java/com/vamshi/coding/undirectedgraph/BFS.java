@@ -10,7 +10,6 @@ public class BFS {
 
     public static ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
         ArrayList < Integer > res = new ArrayList < > ();
-
         boolean vis[] = new boolean[V];
 
         Queue<Integer> q = new LinkedList< >();
