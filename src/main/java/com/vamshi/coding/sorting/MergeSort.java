@@ -1,6 +1,4 @@
-package com.vamshi.coding.sort;
-
-import java.util.Scanner;
+package com.vamshi.coding.sorting;
 
 public class MergeSort {
 
