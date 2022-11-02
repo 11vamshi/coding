@@ -52,8 +52,8 @@ public class MergeSort {
             temp[temp_index++] = arr[j++];
         }
 
-        for(int a=left; a <= right; a++){
-            arr[a] = temp[a];
+        for(int k=left; k <= right; k++){
+            arr[k] = temp[k];
         }
     }
 
