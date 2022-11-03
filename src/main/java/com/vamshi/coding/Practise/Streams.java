@@ -14,6 +14,7 @@ public class Streams {
                 .collect(Collectors.toList());
 
         System.out.println(list);
+
     }
 
 }

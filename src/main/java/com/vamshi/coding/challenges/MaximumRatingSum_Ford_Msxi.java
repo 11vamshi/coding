@@ -1,11 +1,10 @@
-package com.vamshi.coding.ford;
+package com.vamshi.coding.challenges;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
-public class MaximumRatingSum {
+public class MaximumRatingSum_Ford_Msxi {
 
     public static void main(String[] args) {
         int[] ratings = {-1,3,4,-2,5,-7};

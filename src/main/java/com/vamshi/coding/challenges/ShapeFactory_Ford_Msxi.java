@@ -1,6 +1,6 @@
-package com.vamshi.coding.ford;
+package com.vamshi.coding.challenges;
 
-public class ShapeFactory {
+public class ShapeFactory_Ford_Msxi {
     Shape sh;
 
     // at ford, I implemented this factory with return type as EU or NA image service based on request

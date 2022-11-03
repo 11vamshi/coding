@@ -95,7 +95,7 @@ public class WebsitePagination_Ford_Msxi {
         }
     }
 
-    // can be done 2 ways
+    // MultipleFieldsComparator can be done 2 ways, at last we will see java 8 then Comparing
     static class MultipleFieldsComparator implements Comparator<Item>{
 
         // 1 way
@@ -134,6 +134,8 @@ public class WebsitePagination_Ford_Msxi {
         }
     }
 
+
+
     public static void main(String[] args) {
 
         List<List<String>> items = new ArrayList<>();
@@ -154,6 +156,11 @@ public class WebsitePagination_Ford_Msxi {
         int pageNumber = 0;
 
         List<String> res = fetchItemsToDisplay(items, sortParameter,sortOrder,itemsPerPage,pageNumber);
+
+
+//        Comparator<Item> MultipleFieldsComparator = Comparator.comparing(Item::getName)
+//                .thenComparing(Item::getPrice)
+//                .thenComparing(Item::getRelevance);
 
 
         res.stream().forEach(System.out::println);
