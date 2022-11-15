@@ -2,9 +2,9 @@ package com.vamshi.coding.undirectedgraph;
 
 import java.util.*;
 
-public class Bipartite {
+public class L785_Bipartite {
 
-    private boolean check(int start, List<ArrayList<Integer>> adjList, int[] color) {
+    private boolean check(int start, int[][] graph, int[] color) {
 
     Queue<Integer> q = new LinkedList<>();
     q.add(start);
@@ -13,7 +13,7 @@ public class Bipartite {
     while(!q.isEmpty()){
         int curr = q.poll();
 
-        for(int neighbour: adjList.get(start)){
+        for(int neighbour: graph[curr]){
             if(color[neighbour] == -1){
                 color[neighbour] = 1-color[curr];
                 q.add(neighbour);
@@ -24,34 +24,28 @@ public class Bipartite {
         }
     }
     return true;
-
     }
     public boolean isBipartite(int[][] graph) {
 
-        List<ArrayList<Integer>> adjList = new ArrayList<>();
-
-        for(int i=0; i < graph.length;i++){
-            ArrayList<Integer> list = new ArrayList<>();
-
-            for(int j=0;j< graph[0].length; j++){
-                    list.add(graph[i][j]);
-            }
-            adjList.add(list);
-        }
-
-
-        int[] color = new int[adjList.size()];
+        int[] color = new int[graph.length];
         Arrays.fill(color, -1);
 
-        for(int i=0; i < adjList.size();i++){
+        for(int i=0; i < graph.length;i++){
             if(color[i] == -1){
-                if(check(i, adjList, color) == false){
+                if(check(i, graph, color) == false){
                     return false;
                 }
             }
         }
 
         return true;
+    }
+
+    public static void main(String[] args) {
+        L785_Bipartite l785Bipartite = new L785_Bipartite();
+
+        int[][] graph = {{1,3}, {0,2}};
+        System.out.println("Is bipartite " + l785Bipartite.isBipartite(graph));
     }
 
 }
