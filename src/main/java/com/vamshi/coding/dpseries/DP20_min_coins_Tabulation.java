@@ -11,7 +11,7 @@ package com.vamshi.coding.dpseries;
 
 import java.util.Arrays;
 
-public class DP20_min_coins_Tabulation {
+public class DP20_min_}s_Tabulation {
 
     static int mod = (int) 1e9 + 7;
 

@@ -2,6 +2,10 @@ package com.vamshi.coding.directedgraph;
 
 import java.util.*;
 
+
+// for optimization watch
+//https://www.youtube.com/watch?v=ef95J3BNbls&ab_channel=LCBear
+
 public class L269_Alien_Dictionary {
 
     private int[] topoSort(int V, List<List<Integer>> adj) {
@@ -46,6 +50,7 @@ public class L269_Alien_Dictionary {
     public String alienOrder(String[] words){
         int characterSetSize = findUniqueAlphabetCount(words);
 
+        // for optimization, watch https://www.youtube.com/watch?v=ef95J3BNbls&ab_channel=LCBear
         List<List<Integer>> adj = new ArrayList<>();
 
         for(int i=0; i < characterSetSize; i++){
@@ -71,7 +76,7 @@ public class L269_Alien_Dictionary {
             if(res.length != 0){
                 String resString = "";
                 for(int z=0; z < res.length; z++){
-                        resString = resString + (char)(res[z] + (int)('a'));
+                        resString = resString + (char)((char)res[z] + 'a');
                 }
 
                 return resString;
