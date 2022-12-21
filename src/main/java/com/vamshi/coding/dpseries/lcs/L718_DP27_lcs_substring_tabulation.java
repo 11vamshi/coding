@@ -5,7 +5,7 @@ import java.util.Arrays;
 // things to remember, dp size should match the recursion call recursion(s,t,n-1,m-1,dp)
 //
 
-public class DP27_lcs_substring_tabulation {
+public class L718_DP27_lcs_substring_tabulation {
 
     public static void main(String[] args) {
 

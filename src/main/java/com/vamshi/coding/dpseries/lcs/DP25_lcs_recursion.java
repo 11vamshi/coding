@@ -12,20 +12,28 @@ public class DP25_lcs_recursion {
         String s = "ab";
         String t = "defg";
 
-        int n = s.length();
-        int m = t.length();
+        DP25_lcs_recursion dp25_lcs_recursion = new DP25_lcs_recursion();
+        int res = dp25_lcs_recursion.longestCommonSubsequence(s,t);
+        System.out.println(" result is " + res);
+
+    }
+
+    public int longestCommonSubsequence(String text1, String text2) {
+
+        int n = text1.length();
+        int m = text2.length();
 
         int dp[][] = new int[n][m];
         for(int[] row:dp){
             Arrays.fill(row, -1);
         }
 
-        System.out.println(" result is " + recursion(s,t,n-1,m-1,dp));
+        int res = recursion(text1,text2,n-1,m-1,dp);
         printDp(n,m,dp);
-
+        return res;
     }
 
-    private static int recursion(String s, String t, int n, int m, int[][] dp) {
+    private int recursion(String s, String t, int n, int m, int[][] dp) {
         if(n < 0 || m < 0){
             return 0;
         }
@@ -34,9 +42,10 @@ public class DP25_lcs_recursion {
         }
 
         if(s.charAt(n) == t.charAt(m)){
-            return 1 + recursion(s,t,n-1,m-1,dp);
+            return  1 + recursion(s,t,n-1,m-1,dp);
         }
-        return dp[n][m] = Math.max(recursion(s,t,n-1,m,dp), recursion(s,t,n,m-1,dp));
+        return Math.max(recursion(s,t,n-1,m,dp), recursion(s,t,n,m-1,dp));
+
     }
 
     private static void printDp(int n, int k, int[][] dp) {

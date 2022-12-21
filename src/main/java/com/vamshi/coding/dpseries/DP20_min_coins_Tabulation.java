@@ -11,6 +11,7 @@ package com.vamshi.coding.dpseries;
 
 import java.util.Arrays;
 
+
 public class DP20_min_coins_Tabulation {
 
     static int mod = (int) 1e9 + 7;
@@ -18,10 +19,10 @@ public class DP20_min_coins_Tabulation {
     public static void main(String[] args) {
 
 
-        int[] num = new int[]{1,2,3};
+        int[] num = new int[]{1,2,5};
 
 
-        int x = 7;
+        int x = 11;
         int n = num.length;
 
         int dp[][] = new int[n][x+1];
@@ -40,9 +41,9 @@ public class DP20_min_coins_Tabulation {
     }
 
 
-    private static int tabulation(int[] arr, int n, int x, int[][] dp) {
+    private static int tabulation(int[] arr, int n, int amount, int[][] dp) {
 
-        for(int i=0; i<=x; i++){
+        for(int i=0; i<=amount; i++){
             if(i % arr[0] == 0){
                 dp[0][i] = i/arr[0];
             }else{
@@ -52,7 +53,7 @@ public class DP20_min_coins_Tabulation {
 
         for(int index=1; index < n; index++){
 
-            for(int currentTarget=0; currentTarget <= x; currentTarget++){
+            for(int currentTarget=0; currentTarget <= amount; currentTarget++){
 
                 // target could have been achieved with subset ending at previous index
                 int notTaken = dp[index-1][currentTarget];
@@ -67,7 +68,8 @@ public class DP20_min_coins_Tabulation {
             }
 
         }
-        return dp[n-1][x];
+
+        return dp[n-1][amount];
     }
 
 

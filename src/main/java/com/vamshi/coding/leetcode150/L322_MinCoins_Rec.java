@@ -1,10 +1,11 @@
-package com.vamshi.coding.Practise;
+package com.vamshi.coding.leetcode150;
 
 import java.util.Arrays;
 
-public class L322_MinCoins {
+public class L322_MinCoins_Rec {
 
      public int coinChange(int[] coins, int amount) {
+
         int[][] dp = new int[coins.length][amount+1];
 
         for (int i=0; i < dp.length; i++){
@@ -12,9 +13,12 @@ public class L322_MinCoins {
         }
         int result = rec(coins, dp, amount, coins.length-1);
 
+        // forgot this
         if(result >= Math.pow(10,9)){
             result = -1;
         }
+
+        printDp(coins.length, amount, dp);
         return result;
     }
 
@@ -23,10 +27,10 @@ public class L322_MinCoins {
 
         if(current_index == 0){
             if(amount % coins[current_index] == 0){
-                return amount/coins[current_index];
+                return dp[current_index][amount] = amount/coins[current_index];
             }
             else {
-                return (int)Math.pow(10, 9);
+                return dp[current_index][amount] = (int)Math.pow(10, 9);
             }
         }
 
@@ -48,11 +52,22 @@ public class L322_MinCoins {
     public static void main(String[] args) {
         int[] coins = {1,2,5};
 
-        L322_MinCoins l322_minCoins = new L322_MinCoins();
+        L322_MinCoins_Rec l322_minCoinsRec = new L322_MinCoins_Rec();
 
-        int result = l322_minCoins.coinChange(coins, 11);
+        int result = l322_minCoinsRec.coinChange(coins, 11);
 
         System.out.println("result is " + result);
 
+    }
+
+    static void printDp(int n, int k, int[][] dp) {
+        //printing dp
+        for(int i=0; i < n; i++){
+            for(int j=0; j <= k; j++){
+                System.out.print(dp[i][j] + "\t");
+
+            }
+            System.out.println();
+        }
     }
 }
